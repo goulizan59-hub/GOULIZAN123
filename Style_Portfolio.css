@@ -1,0 +1,385 @@
+/* -- 6. PAGE CV -- */
+.cv-conteneur {
+    max-width: 960px;
+    margin: 50px auto;
+    padding: 0 20px 0;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 0;
+    border: 1px solid #2a2a2a;
+    align-items: start;
+}
+
+.cv-entete {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    background-color: #1a1a1a;
+    border: 1px solid #4cacc9;
+    margin-bottom: 40px;
+}
+
+.cv-photo {
+    width: 120px;
+    height: 140px;
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    border: 1px solid #444;
+    flex-shrink: 0;
+}
+
+.cv-identite h2 {
+    color: #4cacc9;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.cv-identite p {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-bottom: 4px;
+}
+
+.cv-section {
+    margin-bottom: 30px;
+    padding: 30px;
+    background-color: #1a1a1a;
+    border-left: 3px solid #c9a84c;
+}
+
+.cv-section h3 {
+    color: #4cacc9;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.cv-section li {
+    color: #ccc;
+    margin-bottom: 6px;
+    list-style: none;
+}
+
+.cv-section li::before {
+    content: "◆ ";
+    color: #4cacc9;
+    font-size: 0.6rem;
+}
+
+/* =====================================STYLES SPÉCIFIQUES AU CV ===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #0d0d0d;
+    color: #f0e6cc;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+/* ── CV CONTENEUR ── */
+.cv-conteneur {
+    max-width: 960px;
+    margin: 50px auto;
+    padding: 0 20px 0;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 0;
+    border: 1px solid #2a2a2a;
+}
+
+/* ══════════════════════════
+           COLONNE GAUCHE
+        ══════════════════════════ */
+.cv-gauche {
+    background-color: #111111;
+    border-right: 1px solid #4cacc9;
+}
+
+/* Photo */
+.cv-photo-zone {
+    padding: 40px 25px 30px;
+    text-align: center;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.cv-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #2a2a2a;
+    border: 3px solid #4cacc9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    color: #4cacc9;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.cv-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.cv-sous-titre {
+    font-size: 0.7rem;
+    color: #888;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Sections gauche */
+.cv-gauche-bloc {
+    padding: 25px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.cv-gauche-bloc:last-child {
+    border-bottom: none;
+}
+
+.cv-gauche-titre {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #4cacc9;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+/* Infos personnelles */
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.info-icon {
+    color: #4cacc9;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.info-text {
+    font-size: 0.78rem;
+    color: #bbb;
+    line-height: 1.4;
+}
+
+/* Points compétences */
+.skill-item {
+    margin-bottom: 12px;
+}
+
+.skill-nom {
+    font-size: 0.78rem;
+    color: #f0e6cc;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.skill-points {
+    display: flex;
+    gap: 5px;
+}
+
+.point {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #4cacc9;
+}
+
+.point.vide {
+    background-color: transparent;
+    border: 1px solid #c9a84c44;
+}
+
+/* ══ HEXAGONES — Qualités uniquement ══ */
+.hex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.hex {
+    position: relative;
+    width: 75px;
+    height: 42px;
+    background: linear-gradient(135deg, #4cacc9, #4cacc9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.52rem;
+    color: #0d0d0d;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+    transition: transform 0.2s;
+}
+
+.hex:hover {
+    transform: scale(1.05);
+}
+
+/* ══ CENTRES D'INTÉRÊT — style liste ◆ ══ */
+.interet-item {
+    font-size: 0.82rem;
+    color: #ccc;
+    margin-bottom: 8px;
+    list-style: none;
+    padding-left: 5px;
+}
+
+.interet-item::before {
+    content: "◆ ";
+    color: #4cacc9;
+    font-size: 0.5rem;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+/* ══════════════════════════
+           COLONNE DROITE
+        ══════════════════════════ */
+.cv-droite {
+    background-color: #0d0d0d;
+    padding: 40px 40px;
+}
+
+/* Nom en haut */
+.cv-nom-zone {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.cv-nom-zone h2 {
+    font-size: 1.6rem;
+    color: #4cacc9;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.cv-nom-zone p {
+    font-size: 0.75rem;
+    color: #888;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Sections droite */
+.cv-droite-bloc {
+    margin-bottom: 30px;
+}
+
+.cv-droite-titre {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #4cacc9;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+/* Profil texte */
+.profil-texte {
+    font-size: 0.85rem;
+    color: #ccc;
+    line-height: 1.8;
+    text-align: justify;
+    border-left: 3px solid #4cacc9;
+    padding-left: 16px;
+    font-style: italic;
+}
+
+/* Objectif professionnel */
+.objectif-texte {
+    font-size: 0.85rem;
+    color: #ccc;
+    line-height: 1.8;
+    text-align: justify;
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-top: 2px solid #4cacc9;
+    padding: 16px;
+}
+
+/* Timeline formation */
+.timeline-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+}
+
+.timeline-annee {
+    font-size: 0.75rem;
+    color: #4cacc9;
+    letter-spacing: 1px;
+    padding-top: 2px;
+}
+
+.timeline-contenu h4 {
+    font-size: 0.95rem;
+    color: #f0e6cc;
+    margin-bottom: 3px;
+}
+
+.timeline-contenu p {
+    font-size: 0.78rem;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+/* Compétences droite */
+.skills-droite {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.skill-droite-tag {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-left: 2px solid #4cacc9;
+    padding: 10px 14px;
+    font-size: 0.78rem;
+    color: #f0e6cc;
+    letter-spacing: 1px;
+}
